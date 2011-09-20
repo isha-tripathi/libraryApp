@@ -1,3 +1,5 @@
+<%= "Successfully Reserved" %>
+
 <p>
   <b>Title:</b>
   <%=h @book.title %>
@@ -7,12 +9,5 @@
   <b>Author:</b>
   <%=h @book.author %>
 </p>
-
-<p>
-  <b>Is Available:</b>
-  <%=h @book.isAvailable %>
-</p>
-
-<%= link_to 'Reserve', users_path %>
 
 <%= link_to 'Back', books_path %>

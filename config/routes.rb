@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
     map.resources :users
 
     map.root :controller => "home", :action=>"index"
-    map.connect '/books/reserve',:controller=> "books", :action=> "reserve"
+    map.connect '/books/reserve',:controller=> "books", :action=> "reserve" , :id=>:book.id
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

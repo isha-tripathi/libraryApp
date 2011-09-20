@@ -3,7 +3,7 @@ class CreateBooks < ActiveRecord::Migration
     create_table :books do |t|
       t.string :title
       t.string :author
-      t.boolean :isAvailable
+      t.integer :isAvailable
       t.references :user
 
       t.timestamps

@@ -1,18 +1,22 @@
 <h1>Reserved books</h1>
-
-
+ <%   @books = Book.all %>
+<table>
   <tr>
     <th>Book</th>
     <th>     </th>
     <th>Author</th>
   </tr>
 
-<table>
+<% @books.each do |book| %>
   <tr>
-    <td><%=h @books.title %></td>
+    <td><%=h book.title %></td>
     <td><%=             %></td>
-    <td><%=h @books.author %></td>
+    <td><%=h book.author %></td>
   </tr>
+  <% end %>
 </table>
-
+ <%= link_to 'Back', books_path %>
 <br />
+
+
+

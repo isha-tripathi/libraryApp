@@ -3,18 +3,24 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>     </th>
+    <th></th>
     <th>Author</th>
-  </tr>
 
-<% @books.each do |book| %>
-  <tr>
-    <td><%=h book.title %></td>
-    <td><%=             %></td>
-    <td><%=h book.author %></td>
-    <td><%= link_to 'Show', book %></td>
-  </tr>
-<% end %>
-</table>
+    <% if @books.empty? %>
+        <td>No books Available</td>
+        </tr>
+    <% else %>
+        <% @books.each do |book| %>
+            <tr>
+              <td><%= h book.title %></td>
+              <td><%= %></td>
+              <td><%= h book.author %></td>
+              <% if book.isAvailable=true %>
+                  <td><%= link_to 'Reserve', book %></td>
+              <% end %>
+            </tr>
+        <% end %>
+    <% end %>
+    </table>
 
-<br />
+<br/>
