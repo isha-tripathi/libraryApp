@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20110919110241) do
     t.string   "title"
     t.string   "author"
     t.boolean  "isAvailable"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

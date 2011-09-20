@@ -45,8 +45,24 @@ class BooksController < ApplicationController
         format.html { render :action => "edit" }
         format.xml  { render :xml => @book.errors, :status => :unprocessable_entity }
       end
+  end
+
+  def reserve
+    @book= Book.find(params[:id])
+
+    respond_to do |format|
+      if @book.isAvailable=true
+        flash[:notice] = ' Succesfully Reserved, enjoy the book!!'
+        format.html { redirect_to(@book)}
+        format.xml {head :ok}
+      else
+        flash[:notice] = 'Sorry the book you requested is not available'
+        format.html { redirect_to(@book)}
+        format.xml {head :ok}
+      end
     end
   end
+end
 
   # DELETE /books/1
   # DELETE /books/1.xml

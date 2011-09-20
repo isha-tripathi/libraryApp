@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :title
       t.string :author
       t.boolean :isAvailable
-      t.integer :user_id
+      t.references :user
 
       t.timestamps
     end
