@@ -1,0 +1,12 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+   title: asjdhysd
+   author: sdjfch
+   isAvailable: 0
+
+two:
+   title: asjysd
+   author: sdjch
+   isAvailable: 0
+
